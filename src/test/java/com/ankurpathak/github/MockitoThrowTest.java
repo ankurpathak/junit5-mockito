@@ -8,13 +8,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 @SuppressWarnings("unchecked")
-public class MockitoThrow {
+public class MockitoThrowTest {
 
     @Mock
     private List<String> list;
@@ -45,5 +45,6 @@ public class MockitoThrow {
         when(list.size()).thenThrow(RuntimeException.class, NumberFormatException.class);
         assertThrows(RuntimeException.class, list::size);
         assertThrows(NumberFormatException.class, list::size);
+        assertTrue(false);
     }
 }
