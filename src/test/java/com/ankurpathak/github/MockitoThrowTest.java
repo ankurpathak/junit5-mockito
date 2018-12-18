@@ -40,6 +40,8 @@ public class MockitoThrowTest {
         assertThrows(NumberFormatException.class, list::size);
     }
 
+
+
     @Test
     public void testMockitoThrowMultipleFirstStyle2(){
         when(list.size()).thenThrow(RuntimeException.class, NumberFormatException.class);
