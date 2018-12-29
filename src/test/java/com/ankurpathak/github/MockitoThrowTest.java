@@ -55,5 +55,7 @@ public class MockitoThrowTest {
         assertNull(demo.getObjectArray());
         assertTrue(true);
         assertTrue(true);
+        assertTrue(true);
     }
+
 }
